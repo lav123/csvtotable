@@ -36,7 +36,7 @@ app.post('/upload', function (req, res) {
            // console.log(csvData);
             db.collection(databasecollection).insertMany(csvData, (err, res) => {
                if (err) throw err;        
-            console.log(`Inserted: ${res.insertedCount} rows`);
+            console.log(`Inserted Data : ${res.insertedCount} rows`);
           });
          })
       return res.send(200).end();
